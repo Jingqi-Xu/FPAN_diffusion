@@ -3,7 +3,6 @@ This repo contains code for the paper: FPAN: Mitigating Replication in Diffusion
 ## Overview
 ![Overview of FPAN](workflow_FPAN.png)
 ## Requirement
-```txt
 diffusers == 0.32.1
 huggingface-hub == 0.27.1
 img2dataset == 1.41.0
@@ -20,5 +19,6 @@ Before training or inference, please download the pretrained UNet weights for **
 
 - [Stable Diffusion v2.1 UNet weights (diffusion_pytorch_model.bin)](https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/unet/diffusion_pytorch_model.bin)
 
-After downloading, please place the file at:
+After downloading, please place the file at: ./download_pretrain/stable_diffusion_2_1/diffusion_pytorch_model.bin
+
 

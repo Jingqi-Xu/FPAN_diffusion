@@ -28,4 +28,14 @@ This is an example of **W=1.7** and **P=0.6**:
 
 ```bash
 accelerate launch --main_process_port 27000 diff_train_baseline_randompick_tokenlevel_1.7_0.6_0_0.4noise.py --pretrained_model_name_or_path stabilityai/stable-diffusion-2-1 --instance_data_dir "./laion_10k_data_2" --resolution=256 --gradient_accumulation_steps=1 --center_crop --random_flip --learning_rate=5e-6 --lr_scheduler constant_with_warmup --lr_warmup_steps=5000 --max_train_steps=100000 --train_batch_size=16 --save_steps=10000 --modelsavesteps 20000 --duplication nodup --output_dir="./out_laion_10k_baseline_randompick_tokenlevel_1.7_0.6_0_0.4noise_orig_capiton" --class_prompt laion_orig --num_train_epoch 200 --modify_unet --modify_unet_config "./unet_config/unet_config.json" --modify_unet_pretrain_path "./download_pretrain/stable_diffusion_2_1/diffusion_pytorch_model.bin"
+```
+## Inference
+```bash
+python diff_inference.py --modelpath "./out_laion_10k_baseline_randompick_tokenlevel_1.7_0.6_0_0.4noise_orig_capiton_laion_orig_nodup/" -nb 8201 --GPT_caption "no" --modify_unet_type "custom"
+```
+## Retrieval
+```bash
+python diff_retrieval.py --arch resnet50_disc --similarity_metric dotproduct --pt_style sscd --dist-url 'tcp://localhost:10001' --world-size 1 --rank 0 --query_dir "./inferences/laion_10k_frozentext/out_laion_10k_baseline_randompick_tokenlevel_1.7_0.6_0_0.4noise_orig_capiton_laion_orig_nodup/laion_orig/" --val_dir "./laion_10k_data_2/"
 
+python -m pytorch_fid ./laion_10k_data_2/raw_images ./inferences/laion_10k_frozentext/out_laion_10k_baseline_randompick_tokenlevel_1.7_0.6_0_0.4noise_orig_capiton_laion_orig_nodup/laion_orig/generations --device cuda
+```

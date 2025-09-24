@@ -15,4 +15,10 @@ torchvision == 0.20.1
 transformers == 4.47.1
 webdataset == 0.2.100
 pytorch-fid == 0.3.0
+## Pretrained Models
+Before training or inference, please download the pretrained UNet weights for **Stable Diffusion v2.1**:
+
+- [Stable Diffusion v2.1 UNet weights (diffusion_pytorch_model.bin)](https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/unet/diffusion_pytorch_model.bin)
+
+After downloading, please place the file at:
 

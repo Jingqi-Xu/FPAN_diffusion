@@ -16,7 +16,7 @@ transformers == 4.47.1
 webdataset == 0.2.100
 pytorch-fid == 0.3.0
 ```
-## Pretrained Models
+## Pretrained models
 Before training or inference, please download the pretrained UNet weights for **Stable Diffusion v2.1**:
 
 - [Stable Diffusion v2.1 UNet weights (diffusion_pytorch_model.bin)](https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/unet/diffusion_pytorch_model.bin)
@@ -39,7 +39,7 @@ python diff_retrieval.py --arch resnet50_disc --similarity_metric dotproduct --p
 
 python -m pytorch_fid ./laion_10k_data_2/raw_images ./inferences/laion_10k_frozentext/out_laion_10k_baseline_randompick_tokenlevel_1.7_0.6_0_0.4noise_orig_capiton_laion_orig_nodup/laion_orig/generations --device cuda
 ```
-## Cite Us
+## Cite us
 ```bash
 @misc{xu2025fpanmitigatingreplicationdiffusion,
       title={FPAN: Mitigating Replication in Diffusion Models through the Fine-Grained Probabilistic Addition of Noise to Token Embeddings}, 

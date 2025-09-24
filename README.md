@@ -3,6 +3,7 @@ This repo contains code for the paper: FPAN: Mitigating Replication in Diffusion
 ## Overview
 ![Overview of FPAN](workflow_FPAN.png)
 ## Requirement
+```txt
 diffusers == 0.32.1
 huggingface-hub == 0.27.1
 img2dataset == 1.41.0
@@ -14,6 +15,7 @@ torchvision == 0.20.1
 transformers == 4.47.1
 webdataset == 0.2.100
 pytorch-fid == 0.3.0
+```
 ## Pretrained Models
 Before training or inference, please download the pretrained UNet weights for **Stable Diffusion v2.1**:
 

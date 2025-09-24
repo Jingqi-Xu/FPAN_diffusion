@@ -39,3 +39,15 @@ python diff_retrieval.py --arch resnet50_disc --similarity_metric dotproduct --p
 
 python -m pytorch_fid ./laion_10k_data_2/raw_images ./inferences/laion_10k_frozentext/out_laion_10k_baseline_randompick_tokenlevel_1.7_0.6_0_0.4noise_orig_capiton_laion_orig_nodup/laion_orig/generations --device cuda
 ```
+## Cite Us
+```bash
+@misc{xu2025fpanmitigatingreplicationdiffusion,
+      title={FPAN: Mitigating Replication in Diffusion Models through the Fine-Grained Probabilistic Addition of Noise to Token Embeddings}, 
+      author={Jingqi Xu and Chenghao Li and Yuke Zhang and Peter A. Beerel},
+      year={2025},
+      eprint={2505.21848},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2505.21848}, 
+}
+```

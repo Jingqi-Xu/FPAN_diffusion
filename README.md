@@ -15,4 +15,4 @@ torchvision == 0.20.1
 transformers == 4.47.1
 webdataset == 0.2.100
 pytorch-fid == 0.3.0
-## Train the model
+
